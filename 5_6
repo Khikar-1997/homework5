@@ -10,18 +10,19 @@ public class Main {
         String text = scanner.nextLine();
         System.out.println(text);
         int count = calculateWordCount(text);
-        System.out.println("count = "+count);
+        System.out.println("count = " + count);
 
     }
+
     public static int calculateWordCount(String text) {
 
         int count = 0;
-            for (int i = 0; i < text.length(); i++) {
-                if (text.charAt(i) == ' ') {
-                    count++;
-                }
+        for (int i = 0; i < text.length(); i++) {
+            if (text.charAt(i) == ' ') {
+                count++;
             }
-            //(cunt + 1)=> for the first word
-        return count+1;
+        }
+        //(cunt + 1)=> for the first word
+        return count + 1;
     }
 }
