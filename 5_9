@@ -1,8 +1,12 @@
+package com.company;
+
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Write a text in consol");
+        System.out.println("Write a radius in consol");
         double radius = scanner.nextDouble();
         System.out.println("radius = " + radius);
         double circlePerimeter = calculateCirclePerimter(radius);
@@ -10,12 +14,14 @@ public class Main {
         double circleArea = calculateCircleArea(radius);
         System.out.println("circleArea = " + circleArea);
     }
+
     public static double calculateCirclePerimter(double radius) {
         double perimeter = 2 * Math.PI * radius;
         return perimeter;
     }
-    public static double calculateCircleArea(double radius){
-        double area = Math.PI * Math.pow(radius,2);
+
+    public static double calculateCircleArea(double radius) {
+        double area = Math.PI * Math.pow(radius, 2);
         return area;
     }
 }
