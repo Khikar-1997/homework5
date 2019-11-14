@@ -1,0 +1,20 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String text = scanner.nextLine();
+        System.out.println(text);
+        char middleSymbol = calculeteTextMiddleSymbol(text);
+        System.out.println("middleSymbol = " + middleSymbol);
+
+    }
+
+    public static char calculeteTextMiddleSymbol(String text) {
+        char middleSymbol = text.charAt(text.length() / 2);
+        return middleSymbol;
+    }
+}
