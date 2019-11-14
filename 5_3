@@ -1,0 +1,27 @@
+package com.company;
+
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Random random = new Random();
+        int number1 = random.nextInt(50);
+        System.out.println("number1 = " + number1);
+        int number2 = random.nextInt(50);
+        System.out.println("number2 = " + number2);
+        int result = calculateProduct(number1, number2);
+        double resultCube = calculateCube(result);
+        System.out.println(resultCube);
+    }
+
+    public static int calculateProduct(int number1, int number2) {
+        int product = number1 * number2;
+        return product;
+    }
+
+    public static double calculateCube(double number) {
+        double cube = Math.pow(number, 3);
+        return cube;
+    }
+}
