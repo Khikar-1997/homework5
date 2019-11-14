@@ -1,0 +1,27 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Write a text in consol");
+        String text = scanner.nextLine();
+        System.out.println(text);
+        int count = calculateWordCount(text);
+        System.out.println("count = "+count);
+
+    }
+    public static int calculateWordCount(String text) {
+
+        int count = 0;
+            for (int i = 0; i < text.length(); i++) {
+                if (text.charAt(i) == ' ') {
+                    count++;
+                }
+            }
+            //(cunt + 1)=> for the first word
+        return count+1;
+    }
+}
