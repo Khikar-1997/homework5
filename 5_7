@@ -1,0 +1,26 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Write a year in consol");
+        int yearNumber = scanner.nextInt();
+        System.out.println("yearNumber = " + yearNumber);
+        int leapYear = calculateLeapYear(yearNumber);
+        System.out.println(leapYear);
+
+    }
+
+    public static int calculateLeapYear(int yearNumber) {
+
+        if (yearNumber % 4 == 0) {
+            System.out.println("it is leap year");
+        } else {
+            System.out.println("it is not leap year");
+        }
+        return yearNumber;
+    }
+}
