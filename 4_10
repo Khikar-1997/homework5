@@ -1,0 +1,47 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Write a sides of triangle in consol");
+        double firstSide = scanner.nextDouble();
+        System.out.println("firstSide = " + firstSide);
+        double secondSide = scanner.nextDouble();
+        System.out.println("secondSide = " + secondSide);
+        double thirdSide = scanner.nextDouble();
+        System.out.println("thirdSide = " + thirdSide);
+        boolean isItTriangle = calculateIsItTrangle(firstSide, secondSide, thirdSide);
+        System.out.println("isItTriangle = " + isItTriangle);
+        if(isItTriangle){
+        double perimeterTriangle = calculateTrianglePerimeter(firstSide, secondSide, thirdSide);
+        System.out.println("perimeterTriangle = " + perimeterTriangle);
+        double areaTriangle = calculateTriangleArea(firstSide, secondSide, thirdSide);
+        System.out.println("areaTriangle = " + areaTriangle);
+        }
+    }
+
+    public static boolean calculateIsItTrangle(double firstSide, double secondSide, double thirdSide) {
+        if (firstSide + secondSide > thirdSide && firstSide + thirdSide > secondSide && secondSide + thirdSide > firstSide) {
+            System.out.println("it is a triangle");
+            return true;
+        } else {
+            System.out.println("it is not triangle");
+            return false;
+        }
+
+    }
+
+    public static double calculateTrianglePerimeter(double firstSide, double secondSide, double thirdSide) {
+        double perimeter = firstSide + secondSide + thirdSide;
+        return perimeter;
+    }
+
+    public static double calculateTriangleArea(double firstSide, double secondSide, double thirdSide) {
+        double perimeter = calculateTrianglePerimeter(firstSide, secondSide, thirdSide);
+        double area = Math.sqrt(perimeter * (perimeter - firstSide) * (perimeter - secondSide) * (perimeter - thirdSide));
+        return area;
+    }
+}
