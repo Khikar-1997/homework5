@@ -1,0 +1,21 @@
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Write a text in consol");
+        double radius = scanner.nextDouble();
+        System.out.println("radius = " + radius);
+        double circlePerimeter = calculateCirclePerimter(radius);
+        System.out.println("circlePerimeter = " + circlePerimeter);
+        double circleArea = calculateCircleArea(radius);
+        System.out.println("circleArea = " + circleArea);
+    }
+    public static double calculateCirclePerimter(double radius) {
+        double perimeter = 2 * Math.PI * radius;
+        return perimeter;
+    }
+    public static double calculateCircleArea(double radius){
+        double area = Math.PI * Math.pow(radius,2);
+        return area;
+    }
+}
