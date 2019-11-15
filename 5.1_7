@@ -1,0 +1,27 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Write a number in consol");
+        System.out.print("number = ");
+        int number = scanner.nextInt();
+        int factorialOfNumber = calculateFactorialOfNumber(number);
+        System.out.println(factorialOfNumber);
+
+    }
+
+    public static int calculateFactorialOfNumber(int number) {
+
+        int factorialNumber = 1;
+        for (int i = 1; i <= number; i++) {
+            factorialNumber *= i;
+        }
+        System.out.print("factorialNumber = ");
+        return factorialNumber;
+    }
+
+
+}
