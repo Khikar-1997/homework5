@@ -1,0 +1,33 @@
+package com.company;
+
+public class Main {
+    public static void main(String[] args) {
+        int range = 100;
+        int primeNumbers = calculatePrimeNumbers(range);
+        System.out.println(primeNumbers);
+    }
+
+    public static boolean checkPrimeNumbers(int numberToCheck) {
+        int numberCheck;
+        for (int i = 2; i <= numberToCheck / 2; i++) {
+            numberCheck = numberToCheck % i;
+            if (numberCheck == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static int calculatePrimeNumbers(int range){
+        boolean isPrime;
+        int number = 101;
+        System.out.print("Prime numbers = ");
+        for (int i = 2; i < range; i++) {
+            isPrime = checkPrimeNumbers(i);
+            if (isPrime == true){
+                System.out.print(i+",");
+            }
+        }
+        return number;
+    }
+}
