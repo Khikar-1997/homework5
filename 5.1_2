@@ -1,0 +1,53 @@
+package com.company;
+
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] array = new int[10];
+        int[] sortArrayAsc = sortArrayAsc(array);
+
+        printSortArrayAsc(sortArrayAsc);
+
+
+    }
+
+    public static int[] sortArrayAsc(int[] sortArrayAsc) {
+        Random random = new Random();
+        int[] createArray = new int[sortArrayAsc.length];
+        System.out.print("createArray = [ ");
+        for (int i = 0; i < createArray.length; i++) {
+            createArray[i] = random.nextInt(100);
+            System.out.print(createArray[i] + " , ");
+        }
+        System.out.print("]");
+        System.out.println();
+        for (int i = 0; i < createArray.length; i++) {
+            for (int j = 0; j < i; j++) {
+                int number;
+                if (createArray[i] < createArray[j]) {
+                    number = createArray[i];
+                    createArray[i] = createArray[j];
+                    createArray[j] = number;
+                }
+            }
+        }
+
+        for (int i = 0; i < createArray.length; i++) {
+            sortArrayAsc[i] = createArray[i];
+
+        }
+
+        return sortArrayAsc;
+
+    }
+
+
+    public static void printSortArrayAsc(int[] array) {
+        System.out.print("sortArrayAsc = [ ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " , ");
+
+        }System.out.print("]");
+    }
+}
