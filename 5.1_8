@@ -1,0 +1,49 @@
+package com.company;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        String[][] matrix = new String[n][n];
+        String[][] createMatrixNbyN = createMatrixNbyN(matrix);
+        printMatrixNbyN(createMatrixNbyN);
+    }
+
+    public static String[][] createMatrixNbyN(String[][] matrix) {
+        Random random = new Random();
+        int number = random.nextInt(3);
+        String text = "";
+        switch (number) {
+            case 1:
+                text = "-";
+                System.out.println(text);
+                break;
+            case 2:
+                text = "+";
+                System.out.println(text);
+                break;
+        }
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = text;
+            }
+
+        }
+        return matrix;
+    }
+
+    public static void printMatrixNbyN(String[][] matrix) {
+        System.out.println("Matrix n by n is");
+        for (int i = 0; i < matrix.length; i++) {
+            System.out.print("[ ");
+            for (int j = 0; j < matrix.length; j++) {
+                System.out.print(matrix[i][j] + " , ");
+            }
+            System.out.print("]");
+            System.out.println();
+        }
+    }
+}
