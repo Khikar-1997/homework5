@@ -10,18 +10,13 @@ public class Main {
         int number = scanner.nextInt();
         int factorialOfNumber = calculateFactorialOfNumber(number);
         System.out.println(factorialOfNumber);
-
     }
 
     public static int calculateFactorialOfNumber(int number) {
-
         int factorialNumber = 1;
         for (int i = 1; i <= number; i++) {
             factorialNumber *= i;
         }
         System.out.print("factorialNumber = ");
         return factorialNumber;
-    }
-
-
 }
