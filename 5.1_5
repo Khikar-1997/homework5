@@ -1,0 +1,36 @@
+package com.company;
+
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] array = new int[10];
+        int[] reverseArray = reverseArray(array);
+        printReverseArray(reverseArray);
+    }
+
+    public static int[] reverseArray(int[] reverseArray) {
+        Random random = new Random();
+        int[] createArray = new int[reverseArray.length];
+        System.out.print("createArray = [ ");
+        for (int i = 0; i < createArray.length; i++) {
+            createArray[i] = random.nextInt(100);
+            System.out.print(createArray[i] + " , ");
+        }
+        System.out.print("]");
+        System.out.println();
+        for (int i = 0; i < createArray.length; i++) {
+            reverseArray[i] = createArray[createArray.length - 1 - i];
+        }
+        return reverseArray;
+    }
+
+
+    public static void printReverseArray(int[] array) {
+        System.out.print("reverseArray = [ ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " , ");
+        }
+        System.out.print("]");
+    }
+}
