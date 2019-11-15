@@ -6,10 +6,7 @@ public class Main {
     public static void main(String[] args) {
         int[] array = new int[10];
         int[] sortArrayAsc = sortArrayAsc(array);
-
         printSortArrayAsc(sortArrayAsc);
-
-
     }
 
     public static int[] sortArrayAsc(int[] sortArrayAsc) {
@@ -35,11 +32,8 @@ public class Main {
 
         for (int i = 0; i < createArray.length; i++) {
             sortArrayAsc[i] = createArray[i];
-
         }
-
         return sortArrayAsc;
-
     }
 
 
@@ -47,7 +41,7 @@ public class Main {
         System.out.print("sortArrayAsc = [ ");
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " , ");
-
-        }System.out.print("]");
+        }
+        System.out.print("]");
     }
 }
