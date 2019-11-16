@@ -1,0 +1,70 @@
+package com.company;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        int[][] matrix = new int[N][N];
+        int[][] createMatrixNbyN = createMatrixNbyN(matrix);
+        printMatrixNbyN(createMatrixNbyN);
+        printMatrixNbyN90(createMatrixNbyN);
+        printMatrixNbyN180(createMatrixNbyN);
+        printMatrixNbyN270(createMatrixNbyN);
+    }
+
+    public static int[][] createMatrixNbyN(int[][] matrixNbyN) {
+        Random random = new Random();
+
+        for (int i = 0; i < matrixNbyN.length; i++) {
+            for (int j = 0; j < matrixNbyN.length; j++) {
+                matrixNbyN[i][j] = random.nextInt(51) + 27;
+            }
+        }
+        return matrixNbyN;
+    }
+
+    public static void printMatrixNbyN(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                System.out.print(matrix[i][j] + " , ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printMatrixNbyN90(int[][] matrix) {
+        System.out.println();
+        System.out.println("matrix90");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                System.out.print(matrix[matrix.length - 1 - j][i] + " , ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printMatrixNbyN180(int[][] matrix) {
+        System.out.println();
+        System.out.println("matrix180");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                System.out.print(matrix[matrix.length - 1 - i][matrix.length - 1 - j] + " , ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void printMatrixNbyN270(int[][] matrix) {
+        System.out.println();
+        System.out.println("matrix270");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                System.out.print(matrix[j][matrix.length - 1 - i] + " , ");
+            }
+            System.out.println();
+        }
+    }
+}
