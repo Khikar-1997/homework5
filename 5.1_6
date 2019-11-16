@@ -1,0 +1,28 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String text = scanner.nextLine();
+        boolean verifyPalindromeCheck = verifyPalindromeCheck(text);
+        System.out.println(verifyPalindromeCheck);
+    }
+
+    public static boolean verifyPalindromeCheck(String text) {
+        boolean result = false;
+        for (int i = 1; i < text.length() / 2; i++) {
+            if (text.charAt(text.length() / 2 - i) == text.charAt(text.length() / 2 + i)) {
+                result = true;
+            }
+        }
+        if (result) {
+            System.out.println("it is polindrom");
+            return true;
+        } else {
+            System.out.println("it is not");
+            return false;
+        }
+    }
+}
