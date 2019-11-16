@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String text = scanner.nextLine();
-        if (isValidPassword(text)) {
-            System.out.println("is valid password " + text);
+        String paswordText = scanner.nextLine();
+        boolean isValidPassword = isValidPassword(paswordText);
+        if (isValidPassword) {
+            System.out.println("is valid password " + paswordText);
         } else {
-            System.out.println("password is not valid " + text);
+            System.out.println("password is not valid " + paswordText);
         }
     }
 
