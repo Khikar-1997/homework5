@@ -68,6 +68,12 @@ public class Main {
         int[][] matrix = new int[N][N];
         int[][] createMatrixNbyN = createMatrixNbyN(matrix);
         printMatrixNbyN(createMatrixNbyN);
+        System.out.println("---———————- MENU —————----");
+        System.out.println("Press 1 For rotating 90*");
+        System.out.println("Press 2 For rotating 180*");
+        System.out.println("Press 3 For rotating 270*");
+        System.out.println("Press 4 to Exit");
+        System.out.println("---————————————————-------");
         int number = scanner.nextInt();
         do {
             switch (number) {
