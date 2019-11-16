@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+
         printMenuMatrixNbyN();
     }
 
@@ -61,7 +62,7 @@ public class Main {
         }
     }
 
-    public static void printMenuMatrixNbyN(){
+    public static void printMenuMatrixNbyN() {
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt();
         int[][] matrix = new int[N][N];
@@ -97,7 +98,8 @@ public class Main {
                     System.out.println("Press 4 to Exit");
                     System.out.println("---————————————————-------");
                     break;
-            }number = scanner.nextInt();
-        }while (number!=4);
+            }
+            number = scanner.nextInt();
+        } while (number != 4);
     }
 }
